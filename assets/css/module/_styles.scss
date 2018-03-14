@@ -1,0 +1,103 @@
+$font-main: 'Roboto-Regular', Helvetica, arial,sans-serif;
+$font-bold: 'Roboto-Bold', Helvetica, arial,sans-serif;
+$font-thin: 'Roboto-Thin', Helvetica, arial,sans-serif;
+
+body{
+  font-size: 18px;
+  line-height: 1.42;
+  color: $cl-text;
+  font-family: $font-main;
+}
+
+header{
+  background-image: url("../images/background_graph.png");
+  height: 1100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .narbar{
+    padding-top: 60px;
+    padding-bottom: 145px;
+    @include clearfix;
+    #navbar-logo{
+      float: left;
+    }
+    &-nav{
+      float: right;
+      padding-top: 20px;
+      .narbar__li{
+        float: left;
+        list-style-type: none;
+        margin-right: 50px;
+        font-family: $font-main;
+        color: #ffffff;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        padding-bottom: 5px;
+        &:before, &:after{
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transform: scale(0);
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+        }
+        &:hover:after, &:hover:before{
+          -webkit-transform: scale(1);
+        }
+      }
+      .hover-bottom {
+        &:before {
+          border-bottom: 3px solid #FFF;
+          border-left: 0;
+          -webkit-transform-origin: 0% 100%;
+        }
+      }
+      .narbar__login{
+        color: $cl-text;
+        border: 1px solid #233a72;
+        padding: 16px 42px;
+        margin-top: -16px;
+        border-radius: 40px;
+        margin-right: 0;
+        transition: 0.3s ease-in-out;
+        &:hover{
+          color: $cl-main;
+          background-color: #233a72;
+        }
+      }
+    }
+  }
+  .header-title{
+    text-align: center;
+    h1{
+      @include text-h1;
+    }
+    h3{
+      @include text-h3;
+      margin-bottom: 80px;
+    }
+    &-started{
+      background-color: #5584ff;
+      color: $cl-main;
+      font-family: $font-bold;
+      display: block;
+      width: 205px;
+      margin: 0 auto;
+      padding: 15px 0;
+      border-radius: 30px;
+      transition: 0.3s ease-in-out;
+      border: 1px solid #5584ff;
+      &:hover{
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        color: #5584ff;
+      }
+    }
+  }
+}

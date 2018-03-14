@@ -31,3 +31,27 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin text-h1{
+  font-family: $font-thin;
+  font-size: 60px;
+
+  color: $cl-main;
+}
+
+@mixin text-h3 {
+  font-family: $font-main;
+  font-size: 36px;
+  color: $cl-text;
+}
+
+$cl-main: #ffffff;
+$cl-text: #8492af;
